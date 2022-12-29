@@ -1,0 +1,8 @@
+{% extends 'main/base.html' %}
+{% block content %}
+{% if request.user.is_authenticated %}
+<h3>Hello, {{user.username}}</h3>
+{% else %}
+<h3>You're not logged in</h3>
+{% endif %}
+{% endblock %}
